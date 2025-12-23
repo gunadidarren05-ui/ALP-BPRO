@@ -41,10 +41,7 @@ public class Champion {
 class Tank extends Champion {
     
     public Tank(String name) {
-        super(name);
-        this.HP = 150;
-        this.ATT = 6;
-        this.DEFF = 8;
+        super(name, 150, 6, 8);
     }
     public Tank(String name, int level, int XP, int DEFF, int HP, int ATT) {
         super(name, level, XP, DEFF, HP, ATT);
@@ -94,4 +91,5 @@ class Fighter extends Champion {
         super(name, level, XP, DEFF, HP, ATT);
     }
 }
+
 
