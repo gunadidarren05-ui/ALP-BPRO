@@ -2,16 +2,21 @@ public class Champion {
     protected final String name;
     protected int HP;
     protected int ATT;
+    protected int DEFF;
     protected int level;
     protected int XP;
-    protected int DEFF;
-
-    public Champion(String name) {
+    
+    //Create new char
+    public Champion(String name, int HP, int ATT, int DEFF) {
         this.name = name;
+        this.HP = HP;
+        this.ATT = ATT;
+        this.DEFF = DEFF;
         this.level = 1;
         this.XP = 0;
     }
 
+    // Existing Char
     public Champion(String name, int level, int XP, int DEFF, int HP, int ATT) {
         this.name = name;
         this.level = level;
@@ -44,17 +49,12 @@ class Tank extends Champion {
     public Tank(String name, int level, int XP, int DEFF, int HP, int ATT) {
         super(name, level, XP, DEFF, HP, ATT);
     }
-
-    
 }
 
 class Mage extends Champion {
     
     public Mage(String name) {
-        super(name);
-        this.HP = 60;
-        this.ATT = 13;
-        this.DEFF = 2;
+        super(name, 60, 13, 2);
     }
 
     public Mage(String name, int level, int XP, int DEFF, int HP, int ATT) {
@@ -64,10 +64,7 @@ class Mage extends Champion {
 
 class Healer extends Champion {
     public Healer(String name) {
-        super(name);
-        this.HP = 80;
-        this.ATT = 7;
-        this.DEFF = 3;
+        super(name, 80, 7, 3);
     }
     public Healer(String name, int level, int XP, int DEFF, int HP, int ATT) {
         super(name, level, XP, DEFF, HP, ATT);
@@ -77,10 +74,7 @@ class Healer extends Champion {
 
 class Assassin extends Champion {
     public Assassin(String name) {
-        super(name);
-        this.HP = 70;
-        this.ATT = 14;
-        this.DEFF = 2;
+        super(name, 70, 14, 2);
     }
 
     public Assassin(String name, int level, int XP, int DEFF, int HP, int ATT) {
@@ -93,13 +87,11 @@ class Assassin extends Champion {
 class Fighter extends Champion {
 
     public Fighter(String name) {
-        super(name);
-        this.HP = 100;
-        this.ATT = 10;
-        this.DEFF = 5;
+        super(name, 100, 10, 5);
     }
     
     public Fighter(String name, int level, int XP, int DEFF, int HP, int ATT) {
         super(name, level, XP, DEFF, HP, ATT);
     }
 }
+
