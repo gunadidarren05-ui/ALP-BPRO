@@ -6,6 +6,10 @@ public class Main {
 
     }
     private static void printMenu() {
-        System.out.println("W");
+        System.out.println("=================================");
+        System.out.println("WELCOME TO THE LEAGUE!");
+        System.out.println("=================================");
+        System.out.println("Here, you are going to enter a tournament and fight your way to the top with other characters.");
+        
     }
 }
